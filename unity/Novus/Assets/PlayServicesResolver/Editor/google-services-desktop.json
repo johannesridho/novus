@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "278678697195",
+    "firebase_url": "https://novus-9e2c2.firebaseio.com",
+    "project_id": "novus-9e2c2",
+    "storage_bucket": "novus-9e2c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278678697195:android:12d845d4f0ea6342",
+        "android_client_info": {
+          "package_name": "com.gambit.novus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278678697195-orrr82sebpj1v1cet331c4fhis5923jk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9rWL3dM_JjLV6YXbMhIPTfvNysPxdF_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://novus-9e2c2.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">278678697195</string>
+  <string name="google_storage_bucket" translatable="false">novus-9e2c2.appspot.com</string>
+  <string name="project_id" translatable="false">novus-9e2c2</string>
+  <string name="google_api_key" translatable="false">AIzaSyD9rWL3dM_JjLV6YXbMhIPTfvNysPxdF_k</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD9rWL3dM_JjLV6YXbMhIPTfvNysPxdF_k</string>
+  <string name="google_app_id" translatable="false">1:278678697195:android:12d845d4f0ea6342</string>
+  <string name="default_web_client_id" translatable="false">278678697195-orrr82sebpj1v1cet331c4fhis5923jk.apps.googleusercontent.com</string>
+</resources>
