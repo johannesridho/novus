@@ -1,4 +1,4 @@
-# Novus
+# Novus, an AR social network built for F8 Hackathon at Facebook Developer Conference 2018
 
 ## Video
 https://www.youtube.com/watch?v=TXMKEuwq9Lo
