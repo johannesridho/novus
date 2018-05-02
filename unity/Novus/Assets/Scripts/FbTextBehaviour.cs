@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ContentTextBehaviour : MonoBehaviour {
+public class FbTextBehaviour : MonoBehaviour {
 	// Use this for initialization
 	private TextMesh contentText;
 	private int counter;
@@ -24,7 +24,7 @@ public class ContentTextBehaviour : MonoBehaviour {
 	}
 
 	void Start () {
-		contentText = GetComponent<TextMesh>();
+		contentText = GameObject.Find("FbText").GetComponent<TextMesh>();
 		counter = 0;
 	}
 	
@@ -33,7 +33,7 @@ public class ContentTextBehaviour : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.RightArrow) && counter < CONTENTS.Length - 1)
 		{
 			var perms = new List<string>(){"public_profile", "email"};
-			FB.LogInWithReadPermissions(perms, AuthCallback);
+//			FB.LogInWithReadPermissions(perms, AuthCallback);
 
 			counter++;
 			Color newColor = new Color(1, 1, 1, 0);
