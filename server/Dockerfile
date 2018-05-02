@@ -3,8 +3,8 @@ WORKDIR /source
 
 RUN apk update && apk add sqlite
 
-RUN npm i
-
 ADD . .
+
+RUN npm i
 
 CMD ["node", "app.js"]
