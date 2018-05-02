@@ -39,7 +39,7 @@ public class FbTextBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyUp(KeyCode.RightArrow) && counter < CONTENTS.Length - 1)
+		if ((Input.GetKeyUp(KeyCode.RightArrow) || Input.GetMouseButtonUp(0)) && counter < CONTENTS.Length - 1)
 		{
 			if (counter == 0) {
 				var perms = new List<string>(){"public_profile", "email"};
