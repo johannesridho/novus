@@ -9,62 +9,23 @@ public class SwipeBehaviour : MonoBehaviour {
 
 	private Vector2 startPos;
 
+	private TextMesh contentText;
+
 	// Use this for initialization
 	void Start () {
-		
+		contentText = GameObject.Find("FbText").GetComponent<TextMesh>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.touchCount > 0) {
-
-			Touch touch = Input.touches[0];
-
-
-			switch (touch.phase)
-			{
-
-			case TouchPhase.Began:
-
-				startPos = touch.position;
-
-				break;
-
-
-
-			case TouchPhase.Ended:
-
-				float swipeDistVertical = (new Vector3 (0, touch.position.y, 0) - new Vector3 (0, startPos.y, 0)).magnitude;
-
-				if (swipeDistVertical > minSwipeDistY) {
-
-					float swipeVerticalValue = Mathf.Sign (touch.position.y - startPos.y);
-
-					if (swipeVerticalValue > 0) {
-						Debug.Log ("atas");
-						//Jump ();
-					} else if (swipeVerticalValue < 0) {
-						Debug.Log ("bawah");
-						//Shrink ();
-					}
-				}
-
-				float swipeDistHorizontal = (new Vector3 (touch.position.x, 0, 0) - new Vector3 (startPos.x, 0, 0)).magnitude;
-
-				if (swipeDistHorizontal > minSwipeDistX) {
-
-					float swipeHorizontalValue = Mathf.Sign (touch.position.x - startPos.x);
-
-					if (swipeHorizontalValue > 0) {
-						Debug.Log ("kanan");
-						// MoveRight ();
-					} else if (swipeHorizontalValue < 0) {
-						Debug.Log ("kiri");
-						//MoveLeft ();
-					}
-				}
-				break;
+			if(Input.GetTouch(0).deltaPosition.x > 0){
+				contentText.text = "right";
 			}
+
+			if(Input.GetTouch(0).deltaPosition.x < 0){
+				contentText.text = "left";
+			}
+		}
 	}
-}
 }
