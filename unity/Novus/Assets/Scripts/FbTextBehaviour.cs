@@ -41,8 +41,10 @@ public class FbTextBehaviour : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyUp(KeyCode.RightArrow) && counter < CONTENTS.Length - 1)
 		{
-			var perms = new List<string>(){"public_profile", "email"};
-//			FB.LogInWithReadPermissions(perms, AuthCallback);
+			if (counter == 0) {
+				var perms = new List<string>(){"public_profile", "email"};
+				FB.LogInWithReadPermissions(perms, AuthCallback);
+			}
 
 			counter++;
 			Color newColor = new Color(1, 1, 1, 0);
