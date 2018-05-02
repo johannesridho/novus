@@ -9,9 +9,11 @@ public class SwipeBehaviour : MonoBehaviour {
 
 	private Vector2 startPos;
 
+	private TextMesh contentText;
+
 	// Use this for initialization
 	void Start () {
-		
+		contentText = GameObject.Find("FbText").GetComponent<TextMesh>();
 	}
 	
 	// Update is called once per frame
@@ -56,10 +58,10 @@ public class SwipeBehaviour : MonoBehaviour {
 					float swipeHorizontalValue = Mathf.Sign (touch.position.x - startPos.x);
 
 					if (swipeHorizontalValue > 0) {
-						Debug.Log ("kanan");
+						contentText.text = "kanan";
 						// MoveRight ();
 					} else if (swipeHorizontalValue < 0) {
-						Debug.Log ("kiri");
+						contentText.text = "kiri";
 						//MoveLeft ();
 					}
 				}
