@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Firebase;
+using Firebase.Database;
+using Firebase.Unity.Editor;
 
 public class FbTextBehaviour : MonoBehaviour {
 	// Use this for initialization
@@ -24,7 +27,13 @@ public class FbTextBehaviour : MonoBehaviour {
 	}
 
 	void Start () {
-		contentText = GameObject.Find("FbText").GetComponent<TextMesh>();
+        // Set up the Editor before calling into the realtime database.
+        FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://novus-9e2c2.firebaseio.com/");
+        // firebase::Future<firebase::database::DataSnapshot> result = dbRef.GetReference("Leaders").GetValue();
+        string r = FirebaseDatabase.DefaultInstance.GetReference("fb").ToString();
+        
+
+        contentText = GameObject.Find("FbText").GetComponent<TextMesh>();
 		counter = 0;
 	}
 	
