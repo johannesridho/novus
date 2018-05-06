@@ -41,9 +41,14 @@ public class FbTextBehaviour : MonoBehaviour {
 	void Update () {
 		if ((Input.GetKeyUp(KeyCode.RightArrow) || Input.GetMouseButtonUp(0)) && counter < CONTENTS.Length - 1)
 		{
+//			if (counter == 0) {
+//				var perms = new List<string>(){"public_profile", "email"};
+//				FB.LogInWithReadPermissions(perms, AuthCallback);
+//			}
+
 			if (counter == 0) {
-				var perms = new List<string>(){"public_profile", "email"};
-				FB.LogInWithReadPermissions(perms, AuthCallback);
+				GameObject butterfly = GameObject.Find("Butterfly");
+				butterfly.SetActive (false);
 			}
 
 			counter++;

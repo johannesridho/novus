@@ -31,7 +31,7 @@ public class DevpostTextBehaviour : MonoBehaviour {
 	void Update () {
 		if ((Input.GetKeyUp(KeyCode.RightArrow) || Input.GetMouseButtonUp(0)) && counter < CONTENTS.Length - 1)
 		{
-			var perms = new List<string>(){"public_profile", "email"};
+//			var perms = new List<string>(){"public_profile", "email"};
 //			FB.LogInWithReadPermissions(perms, AuthCallback);
 
 			counter++;
